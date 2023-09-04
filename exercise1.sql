@@ -1,0 +1,6 @@
+CREATE TABLE cars (
+	id SERIAL PRIMARY KEY,
+	year INT,
+	make TEXT NOT NULL,
+	model TEXT NOT NULL
+);
