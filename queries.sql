@@ -125,7 +125,11 @@ LIMIT 1;
 -- is more than $500. 
 -- Order the results by customer_id.
 
-
+SELECT customer_id, SUM(freight)
+FROM orders
+GROUP BY customer_id
+HAVING (SUM(freight)) > 500
+ORDER BY customer_id;
 
 -- 2.5
 -- Let's say we want to analyze possibly consolidating the shippers we use.
