@@ -85,7 +85,10 @@ SELECT COUNT(*) FROM orders;
 -- Think carefully about how this query answers the question, how many
 -- orders has each customer made?
 
-
+SELECT customer_id, COUNT(order_id) AS order_count
+FROM orders
+GROUP BY customer_id
+ORDER BY order_count DESC, customer_id;
 
 -- 2.3
 -- Which ship_address are we shipping the most orders to?
