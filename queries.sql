@@ -7,7 +7,8 @@
 -- Make sure to test it against the northwind database, using
 -- either pgAdmin or psql!
 
-
+SELECT * FROM categories
+ORDER BY category_id
 
 -- 1.2
 -- Select each city from the employees table without any duplicates
