@@ -8,7 +8,7 @@
 -- either pgAdmin or psql!
 
 SELECT * FROM categories
-ORDER BY category_id
+ORDER BY category_id;
 
 -- 1.2
 -- Select each city from the employees table without any duplicates
@@ -16,7 +16,8 @@ ORDER BY category_id
 --
 -- Hint: Use the DISTINCT keyword at the appropriate place in your query. 
 
-
+SELECT DISTINCT city FROM employees
+ORDER BY city DESC;
 
 -- 1.3
 -- Select the product_id and product_name columns from the products table,
