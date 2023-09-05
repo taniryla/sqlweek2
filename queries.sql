@@ -38,7 +38,9 @@ ORDER BY product_id;
 -- (i.e. those WHERE the reports_to field IS NULL).
 -- Order the results by employee_id.
 
-
+SELECT first_name, last_name FROM employees
+WHERE reports_to IS NULL
+ORDER BY employee_id;
 
 -- 1.5
 -- Select the product_name of each product where the units_in_stock is 
