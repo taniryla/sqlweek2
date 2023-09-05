@@ -106,7 +106,11 @@ ORDER BY order_count DESC, customer_id;
 -- science application! We will take a closer look at data science and
 -- data visualizations in a future lesson.
 
-
+SELECT ship_address, COUNT(order_id) AS order_count
+FROM orders
+GROUP BY ship_address
+ORDER BY order_count DESC
+LIMIT 1;
 
 -- 2.4
 -- Let's say we want to offer a new freight discount, but only to customers
