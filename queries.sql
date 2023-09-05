@@ -27,6 +27,9 @@ ORDER BY city DESC;
 -- Hint: To check if a product is discontinued, use the WHERE clause to
 -- filter for rows/records where the discontinued field is equal to true. 
 
+SELECT product_id, product_name FROM products
+WHERE discontinued = 'True'
+ORDER BY product_id;
 
 
 -- 1.4
