@@ -155,10 +155,10 @@ ORDER BY customer_id;
 -- was created by the WITH query).
 
 WITH shippers_per_customer AS (
-    -- Delete this line and replace it with your first SELECT query to create the CTE.
+    SELECT COUNT(DISTINCT ship_via) AS shipper_count FROM orders
+    GROUP BY customer_id
 ) 
--- Delete this line and replace it with your second SELECT query using the CTE.
-
+SELECT AVG(shipper_count) FROM shippers_per_customer;
 
 
 
