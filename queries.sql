@@ -220,9 +220,12 @@ ORDER BY product_id;
 -- Finally, order the results by region description, territory description, employee 
 -- last name, and employee first name. Use the table aliases before each column name.
 
-SELECT DISTINCT r.region_description, t.territory_description, e.last_name, e.first_name
-FROM employees e
+SELECT DISTINCT r.region_description, t.territory_description, e.last_name, e.first_name 
+FROM employees e 
 JOIN employees_territories et ON e.employee_id = et.employee_id
+JOIN territories t ON t.territory_id = et.territory_id
+JOIN regions r ON t.region_id = r.region_id
+ORDER BY r.region_description, t.territory_description, e.last_name, e.first_name;
 
 
 
