@@ -184,6 +184,9 @@ SELECT AVG(shipper_count) FROM shippers_per_customer;
 
 SELECT p.product_name, c.category_name 
 FROM products p 
+JOIN categories c
+ON p.category_id = c.category_id
+ORDER BY product_id;
 
 
 
