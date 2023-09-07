@@ -39,6 +39,10 @@ CREATE TABLE employees_categories (
 -- place it in the blank space below.
 
 
+ALTER TABLE employees_categories
+ADD CONSTRAINT fk_ec_employees
+FOREIGN KEY (employee_id)
+REFERENCES employees;
 
 -- 4.3: Alter table
 -- Write an ALTER TABLE statement on the employees_categories table. Use it to add
