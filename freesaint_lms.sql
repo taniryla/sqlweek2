@@ -116,3 +116,14 @@ ALTER TABLE lms_topics
 ADD CONSTRAINT fk_lms_topics_lms_chatgpt_sources
 FOREIGN KEY (id)
 REFERENCES lms_chatgpt_sources;
+
+-- add in values
+
+INSERT INTO app_users (name, email, profile_active, calculated_cal_goal, starting_weight, target_weight, age, height)
+VALUES ('Chako Arai', 'chakoarai7@gmail.com', 'True', 1850, 158, 125, 45, 176);
+
+INSERT INTO lms_logins (login_id, username, password)
+VALUES (7145, 'chakoarai', 'password123');
+
+INSERT INTO lms_courses (course_name, course_type, course_description, completed)
+VALUES ('Leaky Gut', 'online', 'lose weight by reducing your leaky gut', False);
