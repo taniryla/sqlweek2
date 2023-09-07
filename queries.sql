@@ -306,7 +306,12 @@ ORDER BY t.territory_id;
 -- Hint: While there are other ways, this is a good chance to use the UNION
 -- operator, as demonstrated in the lesson SQL Set Operations.
 
-
+SELECT company_name, address, city, region, postal_code, country 
+FROM customers
+UNION
+SELECT company_name, address, city, region, postal_code, country
+FROM suppliers
+ORDER BY company_name;
 
 -- BONUS (optional)
 -- 3.6
