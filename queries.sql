@@ -287,6 +287,14 @@ ORDER BY state_name;
 -- Finally, take the final result set and order by territory_id.
 
 
+SELECT t.territory_description, r.region_description 
+FROM territories t
+JOIN regions r 
+ON r.region_id = t.region_id
+WHERE t.territory_id NOT IN (
+    SELECT et.territory_id FROM employees_territories et
+)
+ORDER BY t.territory_id;
 
 -- 3.5
 -- Management needs a list of all suppliers' and customers' contact information 
