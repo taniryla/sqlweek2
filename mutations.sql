@@ -54,7 +54,10 @@ REFERENCES employees;
 -- Test your answer in pgAdmin or psql and verify that it worked correctly, then
 -- place it in the blank space below.
 
-
+ALTER TABLE employees_categories
+ADD CONSTRAINT fk_ec_territories
+FOREIGN KEY (category_id)
+REFERENCES categories;
 
 -- 4.4: Insert records
 -- Write an INSERT statement that inserts the following employee ID, category ID pairs 
