@@ -254,6 +254,9 @@ ORDER BY r.region_description, t.territory_description, e.last_name, e.first_nam
 
 SELECT s.state_name, s.state_abbr, c.company_name
 FROM us_states s
+RIGHT JOIN customers c 
+ON s.state_abbr = c.region
+ORDER BY state_name;
 
 
 
