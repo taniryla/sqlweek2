@@ -67,6 +67,8 @@ REFERENCES categories;
 -- Test your answer in pgAdmin or psql and verify that it worked correctly, then
 -- place it in the blank space below.
 
+INSERT INTO employees_categories (employee_id, category_id)
+VALUES (1,2), (3,4), (4,3), (4,4), (8,2), (1,8), (1,3), (1,6);
 
 
 -- 4.5: Remove records
@@ -78,6 +80,7 @@ REFERENCES categories;
 -- Test your answer in pgAdmin or psql and verify that it worked correctly, then
 -- place it in the blank space below.
 
+DELETE FROM employees_categories;
 
 
 -- Bonus Task (optional)
@@ -91,7 +94,7 @@ REFERENCES categories;
 -- Test your answer in pgAdmin or psql and verify that it worked correctly, then
 -- place it in the blank space below.
 
-
+DROP TABLE employees_categories;
 
 -- 4.6: Delete table
 -- Write a query to delete the employees_categories table entirely,
@@ -101,3 +104,4 @@ REFERENCES categories;
 --
 -- Test your answer in pgAdmin or psql and verify that it worked correctly, then
 -- place it in the blank space below.
+
